@@ -44,8 +44,6 @@ class Model:
         model = models.Sequential()
         model.add(layers.Dense(128, activation='relu', input_shape=(x_train.shape[1],)))
         model.add(layers.Dense(128, activation='relu'))
-        model.add(layers.Dense(128, activation='relu'))
-        model.add(layers.Dense(128, activation='relu'))
         model.add(layers.Dense(1))
         model.compile(loss='mse', optimizer='rmsprop', metrics=['mae'])
         self.model = model
